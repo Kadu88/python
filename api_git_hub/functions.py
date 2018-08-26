@@ -10,3 +10,4 @@ def envia_convite(nome_formatado):
 
 def processa_convite(nome_formatado):
     envia_convite(gera_nome_convite(nome_formatado))
+
