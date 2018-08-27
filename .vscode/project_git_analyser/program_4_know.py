@@ -16,6 +16,8 @@ def zerar_count_repo():
     global counter_rep
     counter_rep = 0
 
+def get_count_repo():
+    return counter_rep
 
 lista_listas_linguagem = []
 
@@ -29,8 +31,8 @@ for linguagem in lista_linguagens:
     for count in range(pg_atual, 4):
         repos = getRest(linguagem, pg_atual)
         increment_count_repo()
-        lista_parametros = {'linguagem':linguagem, 'repos':repos, 'counter_rep':counter_rep}
-        lista_listas_linguagem = lista_listas_linguagem + buscar_repositorios_linguagem(lista_parametros)
+
+        lista_listas_linguagem = lista_listas_linguagem + buscar_repositorios_linguagem(linguagem, repos)
         pg_atual = pg_atual+1
     print(linguagem)    
 
